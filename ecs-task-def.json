@@ -1,0 +1,44 @@
+{
+  "family": "legal-chatbot-task",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "legal-chatbot-container",
+      "image": "961341509083.dkr.ecr.ap-south-1.amazonaws.com/legal-chatbot:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "FLASK_SECRET_KEY",
+          "value": "961b1ee8bbc56a80c6047b555cb779df"
+        },
+        {
+          "name": "GEMINI_API_KEY",
+          "value": "AIzaSyA6JYrhd634cZ2TluTbe4QsfuZTdLHBOlY"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/legal-chatbot-task",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::961341509083:role/ecsTaskExecutionRole",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  }
+}
