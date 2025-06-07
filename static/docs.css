@@ -1,0 +1,473 @@
+body {
+    margin: 0;
+    font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+
+  .section-heading {
+    text-align: center;
+    margin: 2rem 0 3rem;
+  }
+
+  .section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+
+  .section-heading p {
+    color: #aaa;
+    font-size: 1.1rem;
+    font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+  }
+
+  .advanced-cards {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .advanced-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
+  .advanced-card:hover {
+    border-color: #bfaaff;
+    box-shadow: 0 0 15px #bfaaff;
+    transform: translateY(-4px);
+  }
+
+  .svg-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .svg-box img {
+    height: 48px;
+    width: auto;
+  }
+
+  .advanced-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .advanced-card p {
+    font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #111;
+    color: white;
+    position: relative;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1.5rem;
+  }
+/* Prevents underline & color changes when wrapping a div in <a> */
+
+  .navbar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+  .nav-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    border-radius: 20%;
+  }
+
+  .navbar-subtitle {
+    font-size: 1rem;
+    color: #ccc;
+    font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+  }
+
+  .navbar-center {
+    text-align: center;
+  }
+
+  .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #bfaaff;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .navbar-right {
+    position: absolute;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+.navbar-docs-label {
+  font-size: 1rem;
+  color: #ccc;
+  font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block; /* ensures ::before behaves well in links */
+}
+
+/* Make navbar content responsive */
+  @media (max-width: 600px) {
+    .navbar-subtitle {
+      display: none;
+    }
+
+    .navbar-title {
+      font-size: 1.2rem;
+    }
+
+    .navbar-left {
+      gap: 0.5rem;
+    }
+
+    .nav-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 20%;
+    }
+
+    .navbar-docs-label {
+    font-size: 0;
+  }
+
+  .navbar-docs-label::before {
+    font-size: 0.9rem;
+    content: "Docs";
+    color: #ccc;
+  }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #00e5ff;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .card {
+    background: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+  }
+
+  .card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #00e5ff;
+  }
+
+  .infographic {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .infographic img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .infographic p {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #ccc;
+    font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+  }
+
+  /* .examples {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-left: 4px solid #00e5ff;
+    border-radius: 8px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #00e5ff;
+    color: #000;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+  } */
+.callout-box {
+  background-color: #1f1f1f;
+  border-left: 4px solid #00e5ff;
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+  margin-top: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #ccc;
+  font-size: 0.95rem;
+  white-space: pre-line;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.callout-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.callout-box.note {
+  border-left-color: #ff4d4d;
+  padding: 1rem 1rem;
+}
+
+.callout-box strong {
+  color: #bfaaff;
+}
+
+.callout-box ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* .callout-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #00e5ff;
+  color: #000;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.callout-copy-btn:hover {
+  background-color: #00c9e6;
+} */
+
+
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 1.9px;
+    background-color: #373939;
+    color: #000;
+    border: #00e5ff;
+    border-radius: 30%;
+    padding: 0.6rem 0.6rem;
+    cursor: pointer;
+    opacity: 0.8;
+    display: none;
+    z-index: 100;
+  }
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  background-color: #1a1a1f;
+  z-index: 10;
+  font-family: 'Inter', 'IBM Plex Sans', 'Lato', sans-serif;
+  border-top: 1px solid #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  text-align: center;
+  width: 100%;
+}
+
+.footer-text-small {
+  display: none;
+}
+
+@media screen and (max-width: 425px) and (max-height: 608px) {
+  .footer-text-large {
+    display: none;
+  }
+
+  .footer-text-small {
+    display: inline;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .github-icon {
+    margin-top: 5px;
+  }
+}
+
+.github-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.github-icon:hover {
+  opacity: 1;
+}
+  .doc-steps {
+  margin-top: 2.5rem;
+  padding: 0 1.5rem;
+  color: #cfcfcf;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.doc-steps h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.doc-steps .step {
+  margin-bottom: 2rem;
+}
+
+.doc-steps h3 {
+  font-size: 1.15rem;
+  color: #bfaaff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.doc-steps p {
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.doc-steps ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.doc-steps code {
+  background-color: #2c2c2c;
+  color: #00e5ff;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.doc-steps .italic {
+  font-style: italic;
+}
+/*Gradient-animate-text*/
+/* .gradient-animate-text {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite;
+  font-weight: bold;
+  font-size: 2.5rem; 
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+/* Scroll Progress Bar */
+#scroll-progress-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* thinner */
+  z-index: 9999;
+  background: transparent;
+}
+
+#scroll-progress-tricolor {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #FF671F 0%, #FF671F 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #046A38 66.66%, #046A38 100%);
+  transition: width 0.2s ease-out;
+}

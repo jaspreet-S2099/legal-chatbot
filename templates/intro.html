@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What’s That Law? – Intro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='intro.css') }}">
+</head>
+<body>
+<div class="intro-container">
+  <div class="intro-left">
+    <div class="intro-overlay">
+    <div class="project-codename">{IN}LAWS</div>
+    <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="intro-logo" />
+    <h1 class="intro-title">What’s That Law?</h1>
+    <p class="intro-subtitle">Your legal companion for Indian law, IPC & CrPC and more...</p>
+    </div>
+  </div>
+  <div class="intro-right">
+    <div class="intro-message">
+      <span class="highlight">Search For</span>
+      <span class="typed-text" id="typed-text"></span>
+    </div>
+    <div class="intro-note">NO SIGN UP NEEDED ✨</div>
+    <a href="{{ url_for('start') }}" class="button" aria-label="Get Started"></a>
+  </div>
+</div>
+
+
+  <script>
+    const phrases = ["a Law", "an IPC Section", "a Situation"];
+    const typedText = document.getElementById("typed-text");
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const fullText = phrases[currentPhrase];
+      if (isDeleting) {
+        currentChar--;
+      } else {
+        currentChar++;
+      }
+
+      typedText.textContent = fullText.substring(0, currentChar);
+
+      if (!isDeleting && currentChar === fullText.length) {
+        setTimeout(() => isDeleting = true, 1000);
+      } else if (isDeleting && currentChar === 0) {
+        isDeleting = false;
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+      }
+
+      setTimeout(typeEffect, isDeleting ? 80 : 100);
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>

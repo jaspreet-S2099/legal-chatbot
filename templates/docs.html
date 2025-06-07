@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Documentation | What's That Law?</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1CmCa9z+UyR2BQc1Er+12AF0IcbAGNYJb3wvBPQu6+om5FF0pEvR2UD8Sh2TEpQUz9SmWvX5wX+20UHEAx7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Google Fonts for typography -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<!--Fade in for callout boxes below-->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!--Fade in for callout boxes above-->
+
+<!-- Link to external CSS file -->
+<!-- After -->
+<link rel="stylesheet" href="{{ url_for('static', filename='docs.css') }}">
+
+
+</head>
+<body>
+<div id="scroll-progress-wrapper">
+  <div id="scroll-progress-tricolor"></div>
+</div>
+
+<div class="navbar">
+<div class="navbar-left">
+  <a href="{{ url_for('index') }}" class="navbar-link">
+    <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="nav-icon" />
+    <span class="navbar-subtitle">Indian Law Explorer</span>
+  </a>
+</div>
+
+
+  <div class="navbar-center">
+    <span class="navbar-title">{IN}LAWS</span>
+  </div>
+
+  <div class="navbar-right">
+    <span class="navbar-docs-label">Documentation</span>
+  </div>
+</div>
+
+
+
+    <div class="container">
+       <div class="section-heading">
+  <h2 >Start learning</h2>
+  <p>How Our Legal Jack Works – The Flow of Intelligence</p>
+</div>
+
+<div class="cards advanced-cards">
+  <div class="card advanced-card">
+    <div class="svg-box">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXNlYXJjaDItaWNvbiBsdWNpZGUtZmlsZS1zZWFyY2gtMiI+PHBhdGggZD0iTTE1IDJINmEyIDIgMCAwIDAtMiAydjE2YTIgMiAwIDAgMCAyIDJoMTJhMiAyIDAgMCAwIDItMlY3WiIvPjxwYXRoIGQ9Ik0xNCAydjRhMiAyIDAgMCAwIDIgMmg0Ii8+PGNpcmNsZSBjeD0iMTEuNSIgY3k9IjE0LjUiIHI9IjIuNSIvPjxwYXRoIGQ9Ik0xMy4zIDE2LjMgMTUgMTgiLz48L3N2Zz4=" alt="Mobile App" />
+    </div>
+    <h3>RAG-Powered Search</h3>
+    <p>Retrieves the most relevant legal documents to give contextually accurate answers.<br><small>e.g., Indian Penal Code, Constitution Articles</small>
+</p>
+  </div>
+
+  <div class="card advanced-card">
+    <div class="svg-box">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1icmFpbi1jaXJjdWl0LWljb24gbHVjaWRlLWJyYWluLWNpcmN1aXQiPjxwYXRoIGQ9Ik0xMiA1YTMgMyAwIDEgMC01Ljk5Ny4xMjUgNCA0IDAgMCAwLTIuNTI2IDUuNzcgNCA0IDAgMCAwIC41NTYgNi41ODhBNCA0IDAgMSAwIDEyIDE4WiIvPjxwYXRoIGQ9Ik05IDEzYTQuNSA0LjUgMCAwIDAgMy00Ii8+PHBhdGggZD0iTTYuMDAzIDUuMTI1QTMgMyAwIDAgMCA2LjQwMSA2LjUiLz48cGF0aCBkPSJNMy40NzcgMTAuODk2YTQgNCAwIDAgMSAuNTg1LS4zOTYiLz48cGF0aCBkPSJNNiAxOGE0IDQgMCAwIDEtMS45NjctLjUxNiIvPjxwYXRoIGQ9Ik0xMiAxM2g0Ii8+PHBhdGggZD0iTTEyIDE4aDZhMiAyIDAgMCAxIDIgMnYxIi8+PHBhdGggZD0iTTEyIDhoOCIvPjxwYXRoIGQ9Ik0xNiA4VjVhMiAyIDAgMCAxIDItMiIvPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTMiIHI9Ii41Ii8+PGNpcmNsZSBjeD0iMTgiIGN5PSIzIiByPSIuNSIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjEiIHI9Ii41Ii8+PGNpcmNsZSBjeD0iMjAiIGN5PSI4IiByPSIuNSIvPjwvc3ZnPg==" alt="SPA" />
+    </div>
+    <h3>LLM Integration	</h3>
+    <p>Uses Google's Gemini models to understand and generate responses to user queries.<br><small>e.g., Gemini 1.5-pro, Gemini 2.0-flash etc.</small>
+</p>
+  </div>
+
+  <div class="card advanced-card">
+    <div class="svg-box">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1kYXRhYmFzZS1pY29uIGx1Y2lkZS1kYXRhYmFzZSI+PGVsbGlwc2UgY3g9IjEyIiBjeT0iNSIgcng9IjkiIHJ5PSIzIi8+PHBhdGggZD0iTTMgNVYxOUE5IDMgMCAwIDAgMjEgMTlWNSIvPjxwYXRoIGQ9Ik0zIDEyQTkgMyAwIDAgMCAyMSAxMiIvPjwvc3ZnPg==" alt="Web App" />
+    </div>
+    <h3>Local Dataset Fallback	</h3>
+    <p>When needed, it pulls directly from a curated local CSV of Indian law & constitution.
+<br><small>e.g., CSV: ipc_sections.csv from <a style="color: #66CCFF; text-decoration: none;" href="https://www.kaggle.com/datasets/dev523/indian-penal-code-ipc-sections-information">KAGGLE</a> </small></p>
+  </div>
+
+  <div class="card advanced-card">
+    <div class="svg-box">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jbG91ZC11cGxvYWQtaWNvbiBsdWNpZGUtY2xvdWQtdXBsb2FkIj48cGF0aCBkPSJNMTIgMTN2OCIvPjxwYXRoIGQ9Ik00IDE0Ljg5OUE3IDcgMCAxIDEgMTUuNzEgOGgxLjc5YTQuNSA0LjUgMCAwIDEgMi41IDguMjQyIi8+PHBhdGggZD0ibTggMTcgNC00IDQgNCIvPjwvc3ZnPg==" alt="API" />
+    </div>
+    <h3>Cloud-Based & Scalable	</h3>
+    <p>Deployed with Docker and ECS for high availability, security, and smooth scaling.
+
+<br><small>e.g., Docker, AWS ECS, NGINX etc.</small>
+</p>
+  </div>
+</div>
+
+
+        <div class="infographic">
+            <img src="{{ url_for('static', filename='images/infograph.jpg') }}" alt="Infographic" />
+            <p style="font-family: Lato;">"This is the internal logic of the site flow. Built using tools like Gemini API, Pandas, Flask, and styled with custom CSS. Infographic designed via <a href="https://www.napkin.ai/" style="color: #FFD700;text-decoration:none;">Napkin.AI</a>"</p>
+            <div class="doc-steps">
+  <h2>How It Works: Step-by-Step</h2>
+
+  <div class="step">
+    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-code-icon lucide-message-circle-code"><path d="M10 9.5 8 12l2 2.5"/><path d="m14 9.5 2 2.5-2 2.5"/><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg> User Interface</h3>
+    <p>
+      Users initiate interaction through a sleek and intuitive chat-style interface. They can type in everyday language, for example:</p>
+    <ul>
+      <li><span class="italic">"What is Article 21?"</span></li>
+      <li><span class="italic">"Can I be arrested without a warrant?"</span></li>
+      </ul>
+      <p>The frontend is designed for clarity and ease of use, eliminating legal jargon and encouraging users—regardless of legal knowledge—to explore their rights and obligations under Indian law..
+    </p>
+  </div>
+
+  <div class="step">
+    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-icon lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg> Prompt Sent to Gemini</h3>
+    <p>
+    Once a user submits a query, the input is programmatically formatted into a well-structured prompt and sent to the <code>Gemini API</code> (e.g., <code>gemini-1.5-pro</code> or <code>gemini-2.0-flash</code>). This step involves:
+    </p>
+    <ul>
+<li>Minimal prompt engineering to maintain clarity</li>
+
+<li>Adding brief instructions like "Act as an Indian law assistant..." to ensure relevance</li>
+
+<li>Filtering unsafe content</li>
+</ul>
+<p>This ensures the model receives a clean, context-driven request, improving the quality of the output.
+    </p>
+  </div>
+
+  <div class="step">
+    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-search2-icon lucide-file-search-2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><circle cx="11.5" cy="14.5" r="2.5"/><path d="M13.3 16.3 15 18"/></svg> Dataset Lookup</h3>
+    <p>
+    Before relying on generative AI, the system performs a local dataset lookup to find direct matches for frequently asked legal topics. This includes:
+    </p>
+    <ul>
+      <li>IPC sections</li>
+      <li>Constitutional references</li>
+      <li>Trusted public FAQs</li>
+    </ul>
+    <p>If a high-confidence match is found, it is used as reference content. This is part of the Retrieval phase in the <span class="italic">"RAG (Retrieval-Augmented Generation)"</span> architecture.</p>
+  </div>
+
+  <div class="step">
+    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-cog-icon lucide-brain-cog"><path d="m10.852 14.772-.383.923"/><path d="m10.852 9.228-.383-.923"/><path d="m13.148 14.772.382.924"/><path d="m13.531 8.305-.383.923"/><path d="m14.772 10.852.923-.383"/><path d="m14.772 13.148.923.383"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771"/><path d="M17.998 5.125a4 4 0 0 1 2.525 5.771"/><path d="M19.505 10.294a4 4 0 0 1-1.5 7.706"/><path d="M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516"/><path d="M4.5 10.291A4 4 0 0 0 6 18"/><path d="M6.002 5.125a3 3 0 0 0 .4 1.375"/><path d="m9.228 10.852-.923-.383"/><path d="m9.228 13.148-.923.383"/><circle cx="12" cy="12" r="3"/></svg> RAG + Gemini</h3>
+    <p>
+If no exact dataset match is found, the system seamlessly invokes the Gemini LLM. Using the RAG approach, the system:</p>
+    <ul>
+<li>Retrieves semantically related text chunks from the dataset (even partial matches)</li>
+<li>Feeds those into Gemini as context</li>
+<li>Gemini then generates a response grounded in the legal context</li>
+    </ul>
+<p> allows the model to provide context-aware, India-specific legal answers that are both factual and aligned with constitutional and criminal law principles.
+    </p>
+  </div>
+
+  <div class="step">
+    <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> Final Output</h3>
+    <p>
+  The final response—either generated via Gemini or fetched from the dataset—is:</p>
+<ul>
+<li>Displayed to the user in real time</li>
+
+<li>Rendered in the same chat interface for a smooth conversational flow</li>
+
+<li>Designed to be legally accurate, concise, and understandable</li>
+</ul>
+<p>This creates an experience where users feel like they're consulting a virtual legal expert, while the system silently handles data retrieval, LLM invocation, and filtering in the background.</p>
+<h3>✨ Additional Features</h3>
+<p>Our platform also includes several <strong>user-focused enhancements</strong> to improve interactivity and usability:</p>
+<ul>
+  <li><strong>Interactive Sidebar</strong> – View and switch between previous chats.</li>
+  <li><strong>Save Chat History</strong> – Retain records of your queries and responses.</li>
+  <li><strong>Export as PDF</strong> – Download conversations for offline use.</li>
+  <li><strong>Preview-Only Saved Chats</strong> – Click on any saved conversation to view it in a read-only format before export.</li>
+</ul>
+<p>These features ensure the platform feels like a virtual legal assistant—powerful yet intuitive.</p>
+  </div>
+</div>
+
+        </div>
+
+<!-- "Try Asking" Box -->
+<div class="callout-box" id="tryBox" data-aos="fade-up">
+  <strong>✨ Try Asking:</strong>
+  <ul>
+    <li>What does IPC section 302 mean?</li>
+    <li>Is cheating a criminal offense in India?</li>
+    <li>CrPC rules for police arrest?</li>
+  </ul>
+  <!-- <button class="callout-copy-btn" onclick="copyTryBox()">Copy</button> -->
+</div>
+
+<!-- "Note" Box (no copy button) -->
+<div class="callout-box note" data-aos="fade-up">
+  <strong>⚠️ Note:</strong> Our AI is optimized for legal queries only.
+  <ul>
+    • "Write me a monkey joke"
+    • "Sing a song"
+  </ul>
+  Absurd prompts like above may return:
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>"Sorry, I couldn't find any relevant result for your query."
+</div>
+
+    </div>
+
+  <!-- footer here -->
+<div class="footer">
+  <div class="footer-content">
+    <!-- Full text for larger screens -->
+    <span class="footer-text-large">
+      Built with law-v💖 by Jaspreet Singh · © 2025
+    </span>
+    <!-- Short text for small screens -->
+    <span class="footer-text-small">
+      Made with 💖 by JS · © 2025
+    </span>
+  </div>
+
+  <!-- GitHub icon -->
+  <a href="https://github.com/jaspreet-S2099" 
+     target="_blank" 
+     class="github-icon" 
+     aria-label="View source on GitHub">
+    <!-- SVG remains unchanged -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+         viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" 
+         stroke-linecap="round" stroke-linejoin="round" 
+         class="lucide lucide-github-icon lucide-github">
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+      <path d="M9 18c-4.51 2-5-2-7-2"/>
+    </svg>
+  </a>
+</div>
+
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-fading-arrow-up-icon lucide-circle-fading-arrow-up"><path d="M12 2a10 10 0 0 1 7.38 16.75"/><path d="m16 12-4-4-4 4"/><path d="M12 16V8"/><path d="M2.5 8.875a10 10 0 0 0-.5 3"/><path d="M2.83 16a10 10 0 0 0 2.43 3.4"/><path d="M4.636 5.235a10 10 0 0 1 .891-.857"/><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"/></svg></button>
+<!-- koi confusion nahi bas svg tag ke andar hamara lucide icon hai, sirf dikhne me hi complex hai (￣▽￣)" -->
+    <script>
+        window.addEventListener("scroll", () => {
+            const scrollBtn = document.querySelector(".scroll-top");
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        // Scroll Progress Bar
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scrollTop / scrollHeight) * 100;
+  document.getElementById("scroll-progress-tricolor").style.width = `${scrolled}%`;
+});
+
+    </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+</body>
+</html>

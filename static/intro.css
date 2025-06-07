@@ -1,0 +1,227 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  animation: fadeSlideIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.intro-left,
+.intro-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+/* .intro-left {
+  background-color: #1a1a1a;
+  text-align: center;
+} 
+  old .intro-left*/
+
+
+.intro-left {
+  background: linear-gradient(to right, #6f7280, #2a2c3c, #181827, #833ab4);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s infinite ease-in-out;
+  text-align: center;
+  position: relative; /* for gradient- a dark translucent overlay */
+  overflow: hidden; /* for gradient- a dark translucent overlay */
+}
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Jo gradient lagayi hai left split part me, uske liye 👇🏻 */
+.intro-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* adjust darkness here */
+  z-index: 1;
+}
+/* Jo gradient lagayi hai left split part me, uske liye 👆🏻 */
+
+.intro-logo {
+  width: 95px;
+  height: 95px;
+  margin-bottom: 1rem;
+  border-radius: 20%;
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  color: #bfaaff;
+  margin: 0.5rem 0;
+}
+
+.intro-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+/* for fitting our {IN}LAWS beautifully 👇🏻 */
+.project-codename {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: #facc15;
+  background: linear-gradient(90deg, #facc15, #ff80b5, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.6rem;
+  animation: gradientFlow 6s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* for fitting our {IN}LAWS beautifully 👆🏻 */
+
+.intro-right {
+  background-color: #000;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.intro-message {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+
+.highlight {
+  color: #bfaaff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.typed-text {
+  color: #fff;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.intro-note {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 5px #bfaaff, 0 0 10px #bfaaff;
+}
+
+.button {
+  --_fg: #909090;
+  --_bg: #242424;
+  --_y: -4px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  border-radius: 9999rem;
+  background: var(--_bg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  isolation: isolate;
+  text-decoration: none;
+}
+
+.button::after {
+  content: attr(aria-label);
+  color: var(--_bg);
+  padding: 12px 48px;
+  border-radius: inherit;
+  background: var(--_fg);
+  border: 2px solid var(--_bg);
+  transform: translateY(var(--_y));
+  transition: 200ms ease-out;
+}
+
+.button:hover {
+  --_y: -8px;
+}
+
+.button:active {
+  --_y: 2px;
+}
+
+.button:focus-visible {
+  outline-color: black;
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+  }
+
+  .intro-message {
+    font-size: 1.2rem;
+  }
+
+  .highlight {
+    font-size: 1.5rem;
+  }
+
+  .typed-text {
+    font-size: 1.2rem;
+  }
+}
